@@ -1,7 +1,7 @@
 CC=clang++
 LD=clang++
 CFLAGS=-c -Os -Wall -Wextra -Werror -pedantic -std=c++1y -stdlib=libc++ -g -MD -pthread
-LDFLAGS=-stdlib=libc++ -lc++abi -lc++ -lboost_system -lboost_program_options -lboost_filesystem
+LDFLAGS=-stdlib=libc++ -lc++abi -lc++ -lboost_system -lboost_program_options -lboost_filesystem -pthread
 SOURCES=$(shell find . -type f -name "*.cpp" ! -path "*-old")
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=raf
